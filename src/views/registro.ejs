@@ -1,60 +1,124 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=title%></title>
+    <title>Registro - Mi Sitio Web</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #f8f8f8;
         }
-        form {
-            background-color: #ffffff;
+
+        header {
+            background-color: #333;
+            color: #fff;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-            width: 300px;
+            text-align: center;
         }
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            background-color: #666;
+        }
+
+        nav a:hover {
+            background-color: #888;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilos específicos para la página de registro */
+        .register-container {
+            margin: 100px auto;
+            width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .register-form input[type="text"],
+        .register-form input[type="password"],
+        .register-form input[type="email"] {
             width: 100%;
             padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            box-sizing: border-box;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px; /* Ajusta el tamaño del texto si es necesario */
         }
-        input[type="submit"] {
+
+        .register-form input[type="submit"] {
             width: 100%;
-            background-color: #4caf50;
-            color: white;
             padding: 10px;
             border: none;
-            border-radius: 3px;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
             cursor: pointer;
         }
-        input[type="submit"]:hover {
-            background-color: #45a049;
+
+        .register-form input[type="submit"]:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
-    <form action="procesar_registro.php" method="post">
-        <h2>Registro</h2>
-        <input type="text" name="nombre" placeholder="Nombre" required>
-        <input type="text" name="apellido" placeholder="Apellido" required>
-        <input type="email" name="email" placeholder="Correo electrónico" required>
-        <input type="password" name="contrasena" placeholder="Contraseña" required>
-        <input type="password" name="confirmar_contrasena" placeholder="Confirmar contraseña" required>
-        <input type="submit" value="Registrarse">
-    </form>
+    <header>
+        <h1>Bienvenido a SaraWeb</h1>
+    </header>
+
+    <nav>
+        <a class="active" href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/registro">Registro</a>
+    </nav>
+
+    <section class="register-container">
+        <h2>Registro de Usuario</h2>
+        <form class="register-form" action="#" method="post">
+            <input type="text" name="username" placeholder="Usuario" required><br>
+            <input type="password" name="password" placeholder="Contraseña" required><br>
+            <input type="password" name="confirm_password" placeholder="Confirmar Contraseña" required><br>
+            <input type="email" name="email" placeholder="Correo Electrónico" required><br>
+            <input type="submit" value="Registrar">
+        </form>
+    </section>
+
+    <footer>
+        <p>Derechos de autor © 2024 - Mi Sitio Web</p>
+    </footer>
 </body>
 </html>
+

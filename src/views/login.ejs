@@ -1,38 +1,120 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=title%></title>
+    <title>Login - Mi Sitio Web</title>
     <style>
-                body {
+        body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #f8f8f8;
         }
-        form {
-            background-color: #ffffff;
+
+        header {
+            background-color: #333;
+            color: #fff;
             padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
             border-radius: 5px;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            background-color: #666;
+        }
+
+        nav a:hover {
+            background-color: #888;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilos específicos para la página de login */
+        .login-container {
+            margin: 100px auto;
             width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .login-form input[type="submit"]:hover {
+            background-color: #555;
         }
     </style>
-    
 </head>
 <body>
-    <%- include ('partials/head') %>
-    <form action="procesar_login.php" method="post">
-        <label for="usuario">Usuario:</label><br>
-        <input type="text" id="usuario" name="usuario" required><br>
-        <label for="contrasena">Contraseña:</label><br>
-        <input type="password" id="contrasena" name="contrasena" required><br><br>
-        <input type="submit" value="Iniciar sesión">
-    </form>
+    <header>
+        <h1>Bienvenido a SaraWeb</h1>
+    </header>
+
+    <nav>
+        <a class="active" href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/registro">Registro</a>
+    </nav>
+
+    <section class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form class="login-form" action="#" method="post">
+            <input type="text" name="username" placeholder="Usuario" required><br>
+            <input type="password" name="password" placeholder="Contraseña" required><br>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+    </section>
+
+    <footer>
+        <p>Derechos de autor © 2024 - Mi Sitio Web</p>
+    </footer>
 </body>
 </html>
+
